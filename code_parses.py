@@ -9,7 +9,7 @@ class CodeParser:
     def __init__(self):
         self.__string = ""
 
-    def load_from_file(self, path, remove_extras=0):
+    def load_from_file(self, path, remove_extras=0): #можно добавить удаление комментариев для снижения возможности ошбиок в закомментированных частях кода
         with open(path, "r") as file_obj:
             extracted = file_obj.read()
             if remove_extras: #если нужно, то удаляются переносы строк
